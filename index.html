@@ -1,87 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ふらるーと - サポート</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-            line-height: 1.8;
-            color: #3D3D3D;
-            background: #FBF8F4;
-        }
-        .header {
-            background: linear-gradient(135deg, #6BBF8A, #8FD4A8);
-            color: white;
-            text-align: center;
-            padding: 48px 20px;
-        }
-        .header h1 { font-size: 1.8em; }
-        .header p { opacity: 0.95; margin-top: 8px; }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 16px;
-            padding: 32px 28px;
-            box-shadow: 0 1px 3px rgba(61,61,61,0.08);
-            margin-bottom: 24px;
-        }
-        h2 {
-            font-size: 1.2em;
-            color: #4C9E6E;
-            margin-bottom: 12px;
-        }
-        ul { padding-left: 24px; margin-bottom: 12px; }
-        li { margin-bottom: 6px; }
-        .footer {
-            text-align: center;
-            padding: 32px 20px;
-            color: #888;
-            font-size: 0.9em;
-        }
-        a { color: #4C9E6E; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ふらるーと - サポート</title>
+<meta name="description" content="「ふらるーと」は、方角をえらぶだけで散歩の周回コースを自動生成するiOSアプリです。同じ道を往復するのではなく、ぐるっと一周して戻ってくるコースを提案します。">
+<link rel="icon" href="app-icon.png">
+<style>
+:root{
+  --bg:#F6F4EF; --card:#FFFFFF; --ink:#24222B; --sub:#7F7A72; --accent:#388253;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#17161C; --card:#24222D; --ink:#F2EFE8; --sub:#A6A1B0; --accent:#6BBF8A; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;line-height:1.7}
+.wrap{max-width:720px;margin:0 auto;padding:48px 20px}
+.logo{display:flex;align-items:center;gap:14px}
+.logo h1{margin:0;font-size:34px;font-weight:800;line-height:1.3}
+.tagline{color:var(--sub);font-weight:600;margin-top:4px}
+.mark{flex:none;width:56px;height:56px;border-radius:13px}
+.lang-link{margin-top:14px;font-size:14px}
+.card{background:var(--card);border-radius:22px;padding:24px 28px;margin-top:24px;box-shadow:0 3px 12px rgba(40,30,20,.08)}
+h2{font-size:20px;margin:0 0 10px}
+.section-lang{font-size:24px;margin:56px 0 0}
+ul{padding-left:20px;margin:8px 0}
+li+li{margin-top:6px}
+a{color:var(--accent);font-weight:700;word-break:break-all}
+footer{color:var(--sub);font-size:13px;margin-top:40px;text-align:center}
+</style>
 </head>
 <body>
-    <div class="header">
-        <h1>ふらるーと</h1>
-        <p>毎日の散歩を、小さな冒険に。</p>
+<div class="wrap">
+  <div class="logo">
+    <img class="mark" src="app-icon.png" width="56" height="56" alt="">
+    <div>
+      <h1>ふらるーと</h1>
+      <div class="tagline">毎日の散歩を、小さな冒険に。</div>
     </div>
-    <div class="container">
-        <div class="card">
-            <h2>アプリについて</h2>
-            <p>「ふらるーと」は、方角をえらぶだけで散歩の周回コースを自動生成するiOSアプリです。8方位のルートガチャ、距離指定（0.5〜10km）、ウォーク記録、おさんぽ図鑑（スタンプ収集）で、毎日の散歩を楽しくします。</p>
-        </div>
-        <div class="card">
-            <h2>よくある質問</h2>
-            <ul>
-                <li><strong>ルートが表示されない:</strong> 位置情報の利用許可（設定 &gt; プライバシー &gt; 位置情報サービス）と通信環境をご確認ください。</li>
-                <li><strong>指定した距離とずれる:</strong> 道路事情により±20%程度の誤差が生じる場合があります。範囲内の候補を優先して表示しています。</li>
-                <li><strong>無料版の制限:</strong> ルート生成は1日3回、履歴は直近10件までです。買い切りの「ふらるーとPro」で無制限になります。</li>
-                <li><strong>購入の復元:</strong> 設定画面の「購入を復元」からApple IDに紐づく購入を復元できます。</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>サポート</h2>
-            <p>アプリに関するお問い合わせ、不具合の報告、ご要望は下記メールアドレスまでご連絡ください。</p>
-            <p style="margin-top: 12px;"><strong>メール:</strong> <a href="mailto:koyanambo@gmail.com">koyanambo@gmail.com</a></p>
-        </div>
-        <div class="card">
-            <h2>リンク</h2>
-            <ul>
-                <li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer">
-        &copy; 2026 Koya Nambo
-    </div>
+  </div>
+
+  <div class="card">
+    <h2>ふらるーと について</h2>
+    <p>「ふらるーと」は、方角をえらぶだけで散歩の周回コースを自動生成するiOSアプリです。同じ道を往復するのではなく、ぐるっと一周して戻ってくるコースを提案します。</p>
+    <ul>
+      <li><strong>8方位ルートガチャ</strong> — 現在地から8つの方角で周回コースを探します。今日の気分で方角をえらぶだけです。</li>
+      <li><strong>距離はダイヤルで指定</strong> — 0.5〜10kmから選べます。同じ道の折り返しや不自然な遠回りは自動で除外します。</li>
+      <li><strong>ウォークナビ</strong> — 歩行中は進捗・距離・時間を表示します。ルートから大きく離れても「おさんぽモード」でゆるく見守ります。</li>
+      <li><strong>きろく・おさんぽ図鑑</strong> — ゴールすると距離・時間・歩数を記録します。時間帯・天気・季節・コースの形に応じて、全18種のスタンプを集められます。</li>
+    </ul>
+    <p>基本機能は無料です。買い切りの「ふらるーとPro」でルート生成と履歴が無制限になります（サブスクリプションはありません）。</p>
+  </div>
+
+  <div class="card">
+    <h2>サポート</h2>
+    <p>不具合のご報告・ご要望・ご質問は、下記メールアドレスまでお気軽にご連絡ください。</p>
+    <p><a href="mailto:app.info.kn@gmail.com?subject=%E3%81%B5%E3%82%89%E3%82%8B%E3%83%BC%E3%81%A8%20%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">app.info.kn@gmail.com</a></p>
+    <p>よくある質問:</p>
+    <ul>
+      <li><strong>ルートが表示されません</strong> — 位置情報の利用が許可されているか（設定アプリ ＞ プライバシーとセキュリティ ＞ 位置情報サービス）と、通信環境をご確認ください。コースはApple マップの経路情報をもとに作るため、インターネット接続が必要です。</li>
+      <li><strong>指定した距離とコースの距離がずれます</strong> — 道路の事情により、±20%程度の誤差が出ることがあります。指定距離の±20%以内に収まる候補があるときはそれを優先し、指定距離に近い順に表示しています。</li>
+      <li><strong>無料版の制限はありますか？</strong> — 無料版では、ルート生成が1日3回まで（日付が変わるとリセット）、履歴の表示が直近10件までです。買い切りの「ふらるーとPro」を購入すると、どちらも無制限になります。</li>
+      <li><strong>購入を復元するには？</strong> — 「設定」タブの「ふらるーとPro」欄にある「購入を復元」をタップしてください。Pro購入画面にも「購入を復元」ボタンがあります。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>プライバシー</h2>
+    <ul>
+      <li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
+    </ul>
+  </div>
+
+  <footer>© 2026 Koya Nambo — ふらるーと</footer>
+</div>
 </body>
 </html>
